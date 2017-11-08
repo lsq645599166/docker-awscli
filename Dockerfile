@@ -8,6 +8,7 @@ RUN apk update && apk add \
       groff \
       jq \
       xz \
+      perl-xml-twig \
       python \
       py-pip \
       py2-pip && \
