@@ -1,5 +1,5 @@
 FROM alpine:edge
-MAINTAINER Xueshan Feng <sfeng@stanford.edu>
+MAINTAINER Henry Liu <henry.liu@daocloud.io>
 
 RUN apk update && apk add \ 
       bash \
@@ -7,6 +7,7 @@ RUN apk update && apk add \
       less \
       groff \
       jq \
+      xz \
       python \
       py-pip \
       py2-pip && \
