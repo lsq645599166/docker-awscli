@@ -9,6 +9,7 @@ RUN apk update && apk add \
       jq \
       xz \
       perl-xml-twig \
+      tzdata \
       python \
       py-pip \
       py2-pip && \
