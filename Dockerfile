@@ -1,7 +1,7 @@
-FROM alpine:edge
+FROM python:3.6
 MAINTAINER Henry Liu <henry.liu@daocloud.io>
 
-RUN apk update && apk add \ 
+RUN apt-get update && apt-get install \ 
       bash \
       curl \
       less \
@@ -9,11 +9,8 @@ RUN apk update && apk add \
       jq \
       xz \
       perl-xml-twig \
-      tzdata \
-      python \
-      py-pip \
-      py2-pip && \
-      pip install --upgrade pip awscli s3cmd && \
+      tzdata -y && \
+      pip install --upgrade pip awscli s3cmd requests && \
       mkdir /root/.aws
 
 COPY get-metadata /usr/local/bin/get-metadata
